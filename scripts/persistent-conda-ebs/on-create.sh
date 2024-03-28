@@ -18,7 +18,7 @@ unset SUDO_UID
 # Install a separate conda installation via Miniconda
 WORKING_DIR=/home/ec2-user/SageMaker/custom-miniconda
 mkdir -p "$WORKING_DIR"
-wget https://repo.anaconda.com/miniconda/Miniconda3-4.6.14-Linux-x86_64.sh -O "$WORKING_DIR/miniconda.sh"
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$WORKING_DIR/miniconda.sh"
 bash "$WORKING_DIR/miniconda.sh" -b -u -p "$WORKING_DIR/miniconda" 
 rm -rf "$WORKING_DIR/miniconda.sh"
 
