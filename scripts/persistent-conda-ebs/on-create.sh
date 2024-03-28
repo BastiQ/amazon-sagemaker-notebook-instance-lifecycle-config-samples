@@ -28,8 +28,11 @@ source "$WORKING_DIR/miniconda/bin/activate"
 KERNEL_NAME="custom_python"
 PYTHON="3.6"
 
+echo "INFO: Creating new conda environment with name $KERNEL_NAME and Python version $PYTHON"
+conda config --prepend channels conda-forge
 conda create --yes --name "$KERNEL_NAME" python="$PYTHON"
 conda activate "$KERNEL_NAME"
+echo "INFO: Python version: `python --version`"
 
 pip install --quiet ipykernel
 
